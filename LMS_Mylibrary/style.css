@@ -399,7 +399,7 @@
 .page-control >i{
     font-size: 20px;
 }
-.AddtoBook {
+.AddtoBook  {
     position: absolute;
     top: 650px;
     left: 1150px;
@@ -409,7 +409,8 @@
     outline:none;
 }
 .Addbook {
-   
+   text-decoration: none;
+   padding: 20px 50px;
     width: 200px;
     height: 40px;
     border-radius: 30px;
@@ -417,6 +418,7 @@
     color: black;
     border: 2px solid #20D6C0;
 }
+
 .ReturnBook {
     position: absolute;
     top: 650px;
