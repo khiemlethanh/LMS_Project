@@ -452,3 +452,29 @@ span{
 {
   size:50%;
 }
+.heading-trending{
+    text-align: center;
+    margin-bottom: 2rem;
+    position:absolute;
+    top: 700px;
+    left: 40%;
+}
+
+.heading-trending::before{
+    content: '';
+    position: absolute;
+    top:50%; left:0;
+    transform: translateY(-50%);
+    width: 100%;
+    height:.01rem;
+    background: rgba(0,0,0,.1);
+    z-index: -1;
+}
+
+.heading-trending span{
+    font-size: 3rem;
+    padding:.5rem 2rem;
+    color: #4fd6cb;
+    background: #fff;
+    border:var(--border);
+}
