@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200;300;400;500;600;700&display')
+
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Crimson+pro',Roboto;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: #fff
+}
+.image {
+	margin-top: -50px;
+	margin-right: 30px;
+}
+.container {
+    margin-top: 50px;
+    max-width: 300px;
+    width: 100%;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+
+    .container .title {
+        font-family: Verdana;
+	color: #656666;
+	font-size: 14px;
+    }
+    .container .title_2 {
+        font-size: 28px;
+        font-weight: 600;
+        font-family: Helvetica;
+        color: #000;
+        position: center;
+    }
+
+        .container .title_2::before {
+            content: '';
+            position: center;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 30px;
+            background: #ccc
+        }
+
+    .container form .user-detail {
+        justify-content: center;
+        margin: 20px 0 12px 0;
+    }
+
+form .user-detail .input-box {
+    margin-bottom: 15px;
+    width: 90%;
+}
+.input-box label{
+        font-family: Verdana;
+	color: #656666;
+	font-size: 14px;
+}
+
+    form .user-detail .input-box .detail {
+        display: block;  
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+
+    form .user-detail .input-box input {
+        height: 40px;
+        width: 100%;
+        outline: none;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding-left: 15px;
+        font-size: 13px;
+        border-bottom-width: 2px;
+        transition: all 0.3s ease;
+	margin-top: 5px;
+    }
+
+        form .user-detail .input-box input:focus,
+        form .user-detail .input-box input :focus:valid {
+            border-color: #20D6C0;
+        }
+label {
+     font-family: Verdana;
+     font-size: 13px;
+     color: #656666
+}
+label .psw {
+     margin-left: 50px;
+}
+label .psw a{
+    text-decoration: none;
+    color: #4074A3;
+}
+form .button {
+    height 30px;
+    margin: 30px 0;
+}
+    form .button input {
+        height: 50px;
+	width : 300px;
+        outline: none;
+        color: #fff;
+        border: none;
+        font-size: 14px;
+        font-weight: bold;
+        border-radius: 5px;
+        letter-spacing: 1px;
+        background: #20D6C0;
+    }
+.container .uname {
+     margin-left: 20px;
+     margin-top: 130px;
+     font-family: Verdana, Helvetica, fantasy;
+     font-size: 14px;
+     color: #656666
+}
+.container .uname a{
+     text-decoration: none;
+     color: #50A3C7;
+}

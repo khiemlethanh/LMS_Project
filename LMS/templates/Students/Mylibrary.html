@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title> Responsive Sidebar Menu  | CodingLab </title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/Mylibrary_style.css'%}">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav-list">
+            <li>
+                <a href="#">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="links_name">Dashboard</span>
+                </a>
+                <span class="tooltip">Dashboard</span>
+            </li>
+
+            <li>
+                <b>
+                </b>
+                <a href="#">
+                    <i class='bx bx-wallet'></i>
+                    <span class="links_name">My Library</span>
+
+                </a>
+                <span class="tooltip">My Library</span>
+
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class='bx bx-calendar-event'></i>
+                    <span class="links_name">Return Book</span>
+                </a>
+                <span class="tooltip">Return Book</span>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class='bx bx-cog'></i>
+                    <span class="links_name">Setting</span>
+                </a>
+                <span class="tooltip">Setting</span>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class='bx bx-help-circle'></i>
+                    <span class="links_name">Help</span>
+                </a>
+                <span class="tooltip">Help</span>
+            </li>
+
+            <li class="profile">
+                <div class="profile-details">
+                    <img src="{% static 'images/profile_img/user1.jpg'%}" alt="profileImg">
+                    <div class="name_job">
+                        <div class="name">Nguyen Van A</div>
+                        <div class="job">Student</div>
+                    </div>
+                </div>
+                <i class='bx bx-log-out' id="log_out"></i>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <div class="text"><b>My Library</b></div>
+
+        <div class="optionsDiv">
+            <i class="fa fa-filter" aria-hidden="true"></i>
+            <select id="selectField">
+
+                <option value="Filter" selected><b>Filter</b></option>
+                <option value="Name">Name</option>
+                <option value="Status">Status</option>
+                <option value="Author">Author</option>
+                <option value="Type">Type</option>
+                <option value="Date in">Date in</option>
+
+            </select>
+
+
+        </div>
+        <div class="topnav">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <input type="text" placeholder=" Search..">
+        </div>
+
+        <table class="content-table">
+            <thead>
+                <tr>
+                    <th>  </th>
+                    <th>Name</th>
+                    <th>Status</th>
+                    <th>Author</th>
+                    <th>Type</th>
+                    <th>Date in</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" id="select-row"></td>
+                    <th>Dac Nhan Tam</th>
+                    <th>Borrowed</th>
+                    <th>abc</th>
+                    <th>abc</th>
+                    <th>xx/xx/xx</th>
+                </tr>
+                <tr class="active-row">
+                    <td><input type="checkbox" id="select-row"></td>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>3</th>
+                    <th>4 </th>
+                </tr>
+   
+            </tbody>
+        </table>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <button class="page-control input-group-text bg-primary btn btn-primary px-3" id="page-select-prev">
+                    <i class="fa fa-angle-left"></i>
+                </button>
+            </div>
+
+            <select id="page-select" class="form-control bg-primary text-light " aria-label="Page select" aria-describedby="page-select-input">
+                <option value="1">
+                    1 / 1
+
+                </option>
+            </select>
+            <div class="input-group-append">
+                <button class="page-control input-group-text bg-primary btn btn-primary px-3" id="page-select-next">
+                    <i class="fa fa-angle-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="AddtoBook">
+            <button class="Addbook"> Add to book</button>
+        </div>
+
+    </section>
+    
+     
+    <<!-- Search , Board , filter -->
+
+  
+    
+    <!-- s-->
+
+    <script src="{% static 'js/Mylibrary.js'%}"></script>
+</body>
+
+</html>

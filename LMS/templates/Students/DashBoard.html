@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Responsive Sidebar Menu  | CodingLab </title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+        <a href="#">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">Dashboard</span>
+        </a>
+        <span class="tooltip">Dashboard</span>
+      </li>
+
+      <li>
+        <a href="#">
+          <i class='bx bx-wallet'></i>
+          <span class="links_name">My Library</span>
+        </a>
+        <span class="tooltip">My Library</span>
+      </li>
+
+      <li>
+        <a href="#">
+          <i class='bx bx-calendar-event'></i>
+          <span class="links_name">Return Book</span>
+        </a>
+        <span class="tooltip">Return Book</span>
+      </li>
+
+      <li>
+        <a href="#">
+          <i class='bx bx-cog' ></i>
+          <span class="links_name">Setting</span>
+        </a>
+        <span class="tooltip">Setting</span>
+      </li>
+
+      <li>
+        <a href="#">
+          <i class='bx bx-help-circle' ></i>
+          <span class="links_name">Help</span>
+        </a>
+        <span class="tooltip">Help</span>
+      </li>
+
+      <li class="profile">
+        <div class="profile-details">
+          <img src="profile.jpg" alt="profileImg">
+          <div class="name_job">
+            <div class="name">Nguyen Van A</div>
+            <div class="job">Student</div>
+          </div>
+        </div>
+        <i class='bx bx-log-out' id='log_out' style='color:white' ></i>
+      </li>
+    </ul>
+  </div>
+  <section class="home-section">
+      <div class="text">Dashboard</div>
+  </section>
+  <script src="script.js"></script>
+</body>
+
+</html>
