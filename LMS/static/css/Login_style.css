@@ -101,7 +101,7 @@ label .psw a{
     color: #4074A3;
 }
 form .button {
-    height 30px;
+    height: 30px;
     margin: 30px 0;
 }
     form .button input {
@@ -127,3 +127,13 @@ form .button {
      text-decoration: none;
      color: #50A3C7;
 }
+
+.Admin-login {
+    font-family: Verdana;
+    font-size: 13px;
+    color: #656666
+}
+
+ .Admin-login a {
+        text-decoration: none;
+        color: #4074A3;}
