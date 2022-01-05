@@ -128,6 +128,11 @@ form .button {
      color: #50A3C7;
 }
 
+.Admin-login {
+    font-family: Verdana;
+    font-size: 13px;
+    color: #656666
+}
 
    .Admin-login a {
         text-decoration: none;
