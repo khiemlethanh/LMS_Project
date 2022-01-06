@@ -23,4 +23,3 @@ def login(request):
             return redirect('Dashboard')
     else:
         return render(request, 'Login.html')
-

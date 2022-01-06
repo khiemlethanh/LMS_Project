@@ -28,7 +28,7 @@
         </div>
         <ul class="nav-list">
             <li>
-                <a href="#">
+                <a href="{% url 'Dashboard' %}">
                     <i class='bx bx-grid-alt'></i>
                     <span class="links_name">Dashboard</span>
                 </a>
@@ -38,7 +38,7 @@
             <li>
                 <b>
                 </b>
-                <a href="#">
+                <a href="{% url 'Mylibrary' %}">
                     <i class='bx bx-wallet'></i>
                     <span class="links_name">My Library</span>
 
@@ -48,7 +48,7 @@
             </li>
 
             <li>
-                <a href="#">
+                <a href="{% url 'Returnbook' %}">
                     <i class='bx bx-calendar-event'></i>
                     <span class="links_name">Return Book</span>
                 </a>
@@ -56,7 +56,7 @@
             </li>
 
             <li>
-                <a href="#">
+                <a href="{% url 'Setting' %}">
                     <i class='bx bx-cog'></i>
                     <span class="links_name">Setting</span>
                 </a>
@@ -79,7 +79,11 @@
                         <div class="job">Student</div>
                     </div>
                 </div>
-                <i class='bx bx-log-out' id="log_out"></i>
+                <a href="{% url 'Login' %}" onclick="return confirm('Do you really want to logout?');">   
+                <i class='bx bx-log-out' id="log_out"></i> 
+                <span class="links_name">Logout</span>
+                </a>
+                <span class="tooltip">Logout</span>
             </li>
         </ul>
     </div>

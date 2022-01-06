@@ -13,7 +13,8 @@
     <div class="container">
         <div class="title">Welcome back</div>
         <div class="title_2">Login to your account</div>
-        <form action="#">
+        <form action="#" method="post">
+            {% csrf_token %}
             <div class="user-detail">
                 <div class="input-box">
                     <label>Username</label>
@@ -21,7 +22,7 @@
                 </div>
                 <div class="input-box">
                     <label>Password</label>
-                    <input name="password" type="text" placeholder=" Password" required />
+                    <input name="password" type="password"  placeholder=" Password" required />
                 </div>
             </div>
             <br />
@@ -38,7 +39,7 @@
 
         </form>
 
-
+        <span class="Admin-login"><a href="{% url 'admin:index' %}">Login as Admin</a> </span>
         <div class="uname">Don't have account? <a href="">Join free today</a></div>
 
     </div>
