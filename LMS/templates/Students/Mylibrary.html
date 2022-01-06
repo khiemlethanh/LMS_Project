@@ -28,29 +28,21 @@
                 <tr>
                     <th>  </th>
                     <th>Name</th>
-                    <th>Status</th>
                     <th>Author</th>
                     <th>Type</th>
-                    <th>Date in</th>
+                    <th>Image</th>
                 </tr>
             </thead>
             <tbody>
+                {% for book_list in book %}
                 <tr>
                     <td><input type="checkbox" id="select-row"></td>
-                    <th>Dac Nhan Tam</th>
-                    <th>Borrowed</th>
-                    <th>abc</th>
-                    <th>abc</th>
-                    <th>xx/xx/xx</th>
+                    <td> {{book_list.name}} </td>
+                    <td> {{book_list.author}} </td>
+                    <td> {{book_list.category}} </td>
+                    <td><img src = "{{ book_list.image.url }}" alt = "" class = "prod-size" width="50" height="50"></td> 
                 </tr>
-                <tr class="active-row">
-                    <td><input type="checkbox" id="select-row"></td>
-                    <th>1</th>
-                    <th>2</th>
-                    <th>3</th>
-                    <th>3</th>
-                    <th>4 </th>
-                </tr>
+                {% endfor %}
    
             </tbody>
         </table>

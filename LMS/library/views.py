@@ -1,16 +1,17 @@
-from django.shortcuts import render,redirect
-from .models import Author,Book,Issue,Fine
-from django.contrib import auth
-from django.contrib.auth.models import User
-from django.contrib import messages
-from django.core.files.storage import FileSystemStorage
+from django.shortcuts import render
+import calendar
+from datetime import datetime
+from .models import Book
 
-# Create your views here.
 def Mylibrary(request):
-    return render(request, 'Students/Mylibrary.html')
+    book = Book.objects.all()
+    return render(request, 'Students/Mylibrary.html', 
+    {'book': book})
 
 def Dashboard(request):
-    return render(request,'Students/DashBoard.html')
+    book = Book.objects.all()
+    return render(request,'Students/DashBoard.html',
+    {'book': book})
 
 def Returnbook(request):
     return render(request, 'Students/Returnbook.html')

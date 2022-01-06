@@ -47,9 +47,11 @@
                <h1 class="heading-trending"> <span>Treding books</span> </h1>
 
            <div class="container">
+                {% for book_list in book %}
+                {% if book_list.id == 1 or book_list.id == 2 or book_list.id == 3 or book_list.id == 4 or book_list.id == 5 or book_list.id == 6 or book_list.id == 7 or book_list.id == 8 %}
                  <div class="slider">
                      <div class="image">
-                         <img src="{% static 'images/book_img/book-1.png' %}">
+                         <img src="{{ book_list.image.url }}">
 
                          <div class="Button">
                              <a href="#" class="btn">Book Now</a>
@@ -58,135 +60,15 @@
 
                      <div class="book-details">
                          <div class="book-name">
-                             <a href="#">Book 1</a>
-                             <span>New Book</span>
+                             <a href="#">{{book_list.name}}</a>
                          </div>
-
+                         
                      </div>
                  </div>
-                 <div class="slider">
-                     <div class="image">
-                         <img src="{% static 'images/book_img/book-2.png' %}">
-
-                         <div class="Button">
-                             <a href="#" class="btn">Book Now</a>
-                         </div>
-                     </div>
-
-                     <div class="book-details">
-                         <div class="book-name">
-                             <a href="#">Book 2</a>
-                             <span>HotBook</span>
-                         </div>
-
-                     </div>
-                 </div>
-                 <div class="slider">
-                     <div class="image">
-                         <img src="{% static 'images/book_img/book-3.png' %}">
-
-                         <div class="Button">
-                             <a href="#" class="btn">Book Now</a>
-                         </div>
-                     </div>
-
-                     <div class="book-details">
-                         <div class="book-name">
-                             <a href="#">Book 3</a>
-                             <span>New Book</span>
-                         </div>
-
-                     </div>
-                 </div>
-                 <div class="slider">
-                     <div class="image">
-                         <img src="{% static 'images/book_img/book-4.png' %}">
-
-                         <div class="Button">
-                             <a href="#" class="btn">Book Now</a>
-                         </div>
-                     </div>
-
-                     <div class="book-details">
-                         <div class="book-name">
-                             <a href="#">Book 4</a>
-                             <span>New Book</span>
-                         </div>
-
-                     </div>
-                 </div>
-                 <div class="slider">
-                     <div class="image">
-                         <img src="{% static 'images/book_img/book-5.png' %}">
-
-                         <div class="Button">
-                             <a href="#" class="btn">Book Now</a>
-                         </div>
-                     </div>
-
-                     <div class="book-details">
-                         <div class="book-name">
-                             <a href="#">Book 5</a>
-                             <span>HotBook</span>
-                         </div>
-
-                     </div>
-                 </div>
-                 <div class="slider">
-                     <div class="image">
-                         <img src="{% static 'images/book_img/book-6.png' %}">
-
-                         <div class="Button">
-                             <a href="#" class="btn">Book Now</a>
-                         </div>
-                     </div>
-
-                     <div class="book-details">
-                         <div class="book-name">
-                             <a href="#">Boko 6</a>
-                             <span>New Book</span>
-                         </div>
-
-                     </div>
-                 </div>
-                 <div class="slider">
-                     <div class="image">
-                         <img src="{% static 'images/book_img/book-7.png' %}">
-
-                         <div class="Button">
-                             <a href="#" class="btn">Book Now</a>
-                         </div>
-                     </div>
-
-                     <div class="book-details">
-                         <div class="book-name">
-                             <a href="#">Book 7</a>
-                             <span>New Book</span>
-                         </div>
-
-                     </div>
-                 </div>
-                 <div class="slider">
-                     <div class="image">
-                         <img src="{% static 'images/book_img/book-8.png' %}">
-
-                         <div class="Button">
-                             <a href="#" class="btn">Book Now</a>
-                         </div>
-                     </div>
-
-                     <div class="book-details">
-                         <div class="book-name">
-                             <a href="#">Book 8</a>
-                             <span>HotBook</span>
-                         </div>
-
-                     </div>
-                 </div>
+                 {% endif %}
+                 {% endfor %}
                  </div>
                      <i class="fas fa-chevron-right arrow"></i>
-                 </div>
-             </div>
 
              <script type="text/javascript">
                  const arrows = document.querySelectorAll(".arrow");
