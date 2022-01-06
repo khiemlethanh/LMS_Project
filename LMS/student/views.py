@@ -20,9 +20,7 @@ def login(request):
             messages.success(request,'Login successful')
             if 'next' in request.POST:
                 return redirect(request.POST['next'])
-            return redirect('#dashboard')
+            return redirect('Dashboard')
     else:
         return render(request, 'Login.html')
 
-def Mylibrary(request):
-    return render(request, 'Students/Mylibrary.html')
