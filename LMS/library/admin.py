@@ -4,8 +4,6 @@ from django.utils import timezone
 from .models import Author,Book,Fine,Issue
 # Register your models here.
 
-
-
 @admin.register(Issue)
 class IssueAdmin(admin.ModelAdmin):
     list_display=('student','book','issued','returned' ,'days_remaining')

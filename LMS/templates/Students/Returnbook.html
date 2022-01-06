@@ -18,11 +18,15 @@
 
 
         </div>
-        <div class="topnav">
-            <i class="fa fa-search" aria-hidden="true"></i>
-            <input type="text" placeholder=" ">
-        </div>
-
+        <div class="wrap">
+            <div class="search">
+               <input type="text" class="searchTerm" placeholder="What are you looking for?">
+               <button type="submit" class="searchButton">
+                 <i class="fa fa-search"></i>
+              </button>
+            </div>
+         </div>
+        <div class="content-container">
         <table class="content-table">
             <thead>
                 <tr>
@@ -43,17 +47,9 @@
                     <th>abc</th>
                     <th>xx/xx/xx</th>
                 </tr>
-                <tr class="active-row">
-                    <td><input type="checkbox" id="select-row"></td>
-                    <th>1</th>
-                    <th>2</th>
-                    <th>3</th>
-                    <th>3</th>
-                    <th>4 </th>
-                </tr>
-
             </tbody>
         </table>
+        </div>
         <!-- <div class="input-group">
             <div class="input-group-prepend">
                 <button class="page-control input-group-text bg-primary btn btn-primary px-3" id="page-select-prev">

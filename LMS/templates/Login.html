@@ -18,11 +18,11 @@
             <div class="user-detail">
                 <div class="input-box">
                     <label>Username</label>
-                    <input name="username" type="text" placeholder="Username" required />
+                    <input name="username" type="text" placeholder="Username" required oninvalid="this.setCustomValidity('Please enter your StudentID!')"/>
                 </div>
                 <div class="input-box">
                     <label>Password</label>
-                    <input name="password" type="password"  placeholder=" Password" required />
+                    <input name="password" type="password"  placeholder=" Password" required oninvalid="this.setCustomValidity('Please enter your Password!')"/>
                 </div>
             </div>
             <br />
