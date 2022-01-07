@@ -11,6 +11,11 @@
 <body>
     <div class="image"><img class=" image" src="{% static 'images/login_img/front.png'%}" alt="" /></div> 
     <div class="container">
+        {% if messages %}
+            {% for messages in messages %}
+                {{messages}}
+            {% endfor %}
+        {% endif %}
         <div class="title">Welcome back</div>
         <div class="title_2">Login to your account</div>
         <form action="#" method="post">
@@ -36,7 +41,12 @@
             <div class="button">
                 <input type="submit" value="Login now" />
             </div>
-
+            {% if user.is_superuser %}
+            <div class="alert alert-success" role="alert">
+                You are logged in as {{user.first_name}}, here are the
+            <a href="/admin/"></a>
+            </div>
+            {% endif %}
         </form>
 
         <span class="Admin-login"><a href="{% url 'admin:index' %}">Login as Admin</a> </span>

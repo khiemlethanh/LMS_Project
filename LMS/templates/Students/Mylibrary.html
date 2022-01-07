@@ -2,60 +2,60 @@
 {%block content%} 
 <section class="home-section">
         <div class="text"><b>My Library</b></div>
-
-        <div class="optionsDiv">
+    <form class="" action="">
+        <class class="optionsDiv">
             <i class="fa fa-filter" aria-hidden="true"></i>
-            <select id="selectField">
-
+            <select id="selectField" name="selectField">
                 <option value="Filter" selected><b>Filter</b></option>
                 <option value="Name">Name</option>
-                <option value="Status">Status</option>
+                <!-- <option value="Status">Status</option> -->
                 <option value="Author">Author</option>
                 <option value="Type">Type</option>
-                <option value="Date in">Date in</option>
-
+                <!-- <option value="Date in">Date in</option> -->
             </select>
-
-
-        </div>
-        <div class="wrap">
-            <div class="search">
-               <input type="text" class="searchTerm" placeholder="What are you looking for?">
-               <button type="submit" class="searchButton">
-                 <i class="fa fa-search"></i>
-              </button>
+    </form>
+            
             </div>
-         </div>
-
+            <div class="wrap">
+                <div class="search">
+                <input type="text" class="searchTerm" placeholder="What are you looking for?">
+                <button type="submit" class="searchButton">
+                    <i class="fa fa-search"></i>
+                </button>
+                </div>
+            </div>
+            
+    <form class="" action = "Returnbook">
         <div class="content-container">
-            <table class="content-table">
-                <thead>
-                    <tr>
-                        <th>  </th>
-                        <th>Name</th>
-                        <th>Author</th>
-                        <th>Type</th>
-                        <th>Image</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for book_list in book %}
-                    <tr>
-                        <td><input type="checkbox" id="select-row"></td>
-                        <td> {{book_list.name}} </td>
-                        <td> {{book_list.author}} </td>
-                        <td> {{book_list.category}} </td>
-                        <td><img src = "{{ book_list.image.url }}" alt = "" class = "prod-size" width="50" height="50"></td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-            <div class='AddtoBook'>
-                <button class='Addbook'> Add to book</button>
-            </div>
+                <table class="content-table" id="table1">
+                    <thead>
+                        <tr>
+                            <th>  </th>
+                            <th>Name</th>
+                            <th>Author</th>
+                            <th>Type</th>
+                            <th>Image</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for book_list in book %}
+                        <tr>
+                            <td><input type="checkbox" id="select-row"></td>
+                            <td> {{book_list.name}} </td>
+                            <td> {{book_list.author}} </td>
+                            <td> {{book_list.category}} </td>
+                            <td><img src = "{{ book_list.image.url }}" alt = "" class = "prod-size" width="50" height="50"></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            
+                <div class='AddtoBook'>
+                    <button class='Addbook'> Add to book</button>
+                </div>
+    </form>
         </div>
 
     </section>
     
-     
 {%endblock%}
