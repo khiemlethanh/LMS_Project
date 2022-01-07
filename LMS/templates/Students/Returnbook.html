@@ -35,18 +35,22 @@
                     <th>Status</th>
                     <th>Author</th>
                     <th>Type</th>
-                    <th>Date in</th>
                 </tr>
             </thead>
             <tbody>
+                {% for temp in issue %}
                 <tr>
                     <td><input type="checkbox" id="select-row"></td>
-                    <th>Dac Nhan Tam</th>
-                    <th>Borrowed</th>
-                    <th>abc</th>
-                    <th>abc</th>
-                    <th>xx/xx/xx</th>
+                    <th>{{temp.book.name}}</th>
+                    {% if temp.returned == 0 %}
+                        <th>Borrowed</th>
+                    {% else %}
+                        <th>Returned</th>
+                    {% endif %}
+                    <th>{{temp.book.author}}</th>
+                    <th>{{temp.book.category}}</th>
                 </tr>
+                {% endfor %}
             </tbody>
         </table>
         </div>

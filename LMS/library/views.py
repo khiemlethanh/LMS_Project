@@ -12,7 +12,7 @@ from django.contrib import auth
 from core import settings
 
 def Mylibrary(request):
-    book = Book.objects.all()
+    book = Book.objects.all()   
     return render(request, 'Students/Mylibrary.html', 
     {'book': book})
 
@@ -38,8 +38,16 @@ def Dashboard(request):
     {'book': book})
 
 def Returnbook(request):
-    return render(request, 'Students/Returnbook.html')
+    student = Student.objects.get(student_id = request.user)
+    issue = Issue.objects.filter(student_id = student).select_related('book')
+
+    return render(request, 'Students/Returnbook.html',
+    {'issue': issue})
 
 def Setting(request):
-    return render(request, 'Students/Setting.html')
+    student=Student.objects.get(student_id=request.user)
+    name = student.last_name + " " + student.first_name
+
+    return render(request, 'Students/Setting.html',
+    {'cur_user': student, 'name': name})
     

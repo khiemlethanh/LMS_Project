@@ -6,12 +6,13 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.core.files.storage import FileSystemStorage
 
+
 def login(request):
     if request.method == 'POST':
         user = auth.authenticate(request,
                                  username=request.POST['username'], 
                                  password=request.POST['password'])
-        print(user)                        
+        print(user)                       
         if user is None:
             messages.error(request,'Login fail try agian!')
             return redirect('Login')
